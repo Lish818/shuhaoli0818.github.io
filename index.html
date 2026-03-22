@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shuhao Li - M.Phil. Researcher</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Page Entry Curtain Animation -->
+    <div class="page-curtain"></div>
+
+    <!-- Interactive Particle Background -->
+    <canvas id="particle-canvas" style="position: fixed; top: 0; left: 0; width: 100%; height: 100vh; z-index: -2; pointer-events: none; opacity: 1;"></canvas>
+
+    <!-- Animated Background Blobs -->
+    <div class="bg-blobs">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+    </div>
+
+    <div class="layout-wrapper">
+        
+        <!-- Left Sidebar (Fixed) -->
+        <aside class="sidebar fade-in-load">
+            <div class="profile-image-wrapper">
+                <img src="assets/css/img/profile.jpg" alt="Shuhao Li">
+            </div>
+
+            <h1 class="site-title">Shuhao Li</h1>
+            <p class="site-subtitle">
+                M.Phil. Researcher in <br>
+                <span class="text-gradient type-wrap">
+                    <span class="typewriter"></span><span class="cursor">|</span>
+                </span><br>
+                @ HKUST
+            </p>
+
+            <ul class="nav-menu">
+                <li><a href="#about" class="active"><span class="nav-line"></span> About</a></li>
+                <li><a href="#news"><span class="nav-line"></span> News</a></li>
+                <li><a href="#publications"><span class="nav-line"></span> Publications</a></li>
+                <li><a href="#education"><span class="nav-line"></span> Education</a></li>
+                <li><a href="cv/CV_LSH_e.pdf" target="_blank"><span class="nav-line"></span> View CV <i class="fas fa-external-link-alt" style="margin-left: 8px; font-size: 0.7rem;"></i></a></li>
+            </ul>
+
+            <div class="social-links">
+                <a href="mailto:slifv@connect.ust.hk" aria-label="Email" title="Email"><i class="fas fa-envelope"></i></a>
+                <a href="https://scholar.google.com/citations?user=qklDmAEAAAAJ&hl=en" target="_blank" aria-label="Google Scholar" title="Google Scholar"><i class="fas fa-graduation-cap"></i></a>
+                <a href="https://github.com/Lish818" target="_blank" aria-label="GitHub" title="GitHub"><i class="fab fa-github"></i></a>
+                <a href="https://orcid.org/0009-0003-8749-1569" target="_blank" aria-label="ORCID" title="ORCID"><i class="fab fa-orcid"></i></a>
+                <a href="https://www.linkedin.com/in/shuhao-li-822772347/" target="_blank" aria-label="LinkedIn" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+            </div>
+            
+            <div style="margin-top: 1.5rem; color: var(--text-tertiary); font-size: 0.9rem; display: flex; align-items: center; gap: 0.5rem; font-weight: 500; letter-spacing: 0.05em;">
+                <i class="fas fa-map-marker-alt" style="color: var(--accent-color);"></i> Hong Kong SAR
+            </div>
+        </aside>
+
+        <!-- Right Content (Scrollable) -->
+        <main class="main-content">
+            
+            <!-- About Section -->
+            <section id="about" class="reveal">
+                <h2>About</h2>
+                <p>
+                    I am an MPhil student in Civil Engineering at <strong>The Hong Kong University of Science and Technology (HKUST)</strong>, where I am honored to be a recipient of the HKUST RedBird PhD Recruitment Award.
+                </p>
+                <p>
+                    My research focuses on the application of <strong>Artificial Intelligence (AI) in smart building control</strong>. Specifically, I explore Model Predictive Control (MPC), Deep Reinforcement Learning (DRL), and Large Language Models (LLMs) to optimize building energy performance, chiller sequencing, and operational automation.
+                </p>
+                <p>
+                    I aim to bridge the gap between advanced computational algorithms and real-world engineering deployment. I developed a data-driven MPC framework that achieved 11.52% energy savings in a Shanghai commercial complex, and created <strong>AutoLFM</strong>, a multi-agent LLM framework for automated building load forecasting.
+                </p>
+
+                <!-- Featured Works inside About -->
+                <h3 class="sub-heading" style="margin-top: 3rem;">Featured Works</h3>
+                
+                <!-- Pub 1 -->
+                <div class="pub-card reveal">
+                    <div class="pub-image">
+                        <img src="assets/css/img/1.jpg" alt="AutoLFM Framework">
+                    </div>
+                    <div class="pub-info">
+                        <div class="pub-title">AutoLFM: A multi-agent LLM framework for automated building load forecasting</div>
+                        <div class="pub-authors"><strong>S. Li</strong> <span class="tag-author">First Author</span>, W. Zheng, M. Li, S. Xing, & Z. Wang</div>
+                        <div class="pub-venue">Building Simulation (2026)</div>
+                        <div class="btn-group">
+                            <a href="https://scholar.google.com/scholar?q=AutoLFM%3A+A+multi-agent+LLM+framework+for+automated+building+load+forecasting" target="_blank" class="btn-sm"><i class="fas fa-link"></i> Publisher</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pub 2 -->
+                <div class="pub-card reveal">
+                    <div class="pub-image">
+                        <img src="assets/css/img/2.png" alt="Semantic model for chiller sequencing">
+                    </div>
+                    <div class="pub-info">
+                        <div class="pub-title">Applying semantic model for easy and fast deployment of chiller sequencing algorithm</div>
+                        <div class="pub-authors"><strong>S. Li</strong> <span class="tag-author">First Author</span>, M. Li, Z. Hu, & Z. Wang</div>
+                        <div class="pub-venue">Energy and Buildings (2025)</div>
+                        <div class="btn-group">
+                            <a href="https://scholar.google.com/scholar?q=Applying+semantic+model+for+easy+and+fast+deployment+of+chiller+sequencing+algorithm" target="_blank" class="btn-sm"><i class="fas fa-link"></i> Publisher</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- News Section -->
+            <section id="news" class="reveal">
+                <h2>Latest News</h2>
+                
+                <div class="list-item">
+                    <div class="list-date">Jan 2026</div>
+                    <div class="list-content">
+                        <p>Led my team to win the <strong>Silver Award</strong> (Sustainability & ESG Track) at the Hong Kong Techathon+ 10th Anniversary Edition. <a href="https://www.hktechathon.com/zh-hk/site/award-list" target="_blank">[Award List]</a></p>
+                    </div>
+                </div>
+
+                <div class="list-item">
+                    <div class="list-date">Jan 2026</div>
+                    <div class="list-content">
+                        <p>Honored to receive the <strong>HKUST RedBird PhD Recruitment Award</strong>, recognizing academic excellence with a full tuition fee waiver and HK$40,000.</p>
+                    </div>
+                </div>
+
+                <div class="list-item">
+                    <div class="list-date">2025 - 2026</div>
+                    <div class="list-content">
+                        <p>Published multiple papers in top-tier journals including <em>Energy and Buildings</em>, <em>Building Simulation</em>, and <em>Automation in Construction</em>.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Publications Section -->
+            <section id="publications" class="reveal">
+                <h2>Publications</h2>
+                <p style="margin-bottom: 2rem;">For a full list of papers, please visit my <a href="https://scholar.google.com/citations?user=qklDmAEAAAAJ&hl=en" target="_blank" style="color: var(--accent-color); font-weight: 600;">Google Scholar <i class="fas fa-external-link-alt" style="font-size: 0.8rem;"></i></a>.</p>
+
+                <h3 class="sub-heading">First Author</h3>
+                
+                <div class="citation reveal">
+                    <p>
+                        <span class="author-highlight">Li, S.</span>, Zheng, W., Li, M., Xing, S., & Wang, Z. (2026). 
+                        <span class="paper-title">AutoLFM: A multi-agent LLM framework for automated building load forecasting.</span> 
+                        <span class="venue">Building Simulation</span>. [IF=5.9]
+                    </p>
+                    <div class="btn-group">
+                        <a href="https://scholar.google.com/scholar?q=AutoLFM%3A+A+multi-agent+LLM+framework+for+automated+building+load+forecasting" target="_blank" class="btn-sm"><i class="fas fa-link"></i> Publisher</a>
+                        <a href="https://scholar.google.com/citations?user=qklDmAEAAAAJ&hl=en" target="_blank" class="btn-sm"><i class="fas fa-link"></i> Scholar</a>
+                    </div>
+                </div>
+
+                <div class="citation reveal">
+                    <p>
+                        <span class="author-highlight">Li, S.</span>, Li, M., Hu, Z., & Wang, Z. (2025). 
+                        <span class="paper-title">Applying semantic model for easy and fast deployment of chiller sequencing algorithm.</span> 
+                        <span class="venue">Energy and Buildings</span>, 116830. [IF=7.3]
+                    </p>
+                    <div class="btn-group">
+                        <a href="https://scholar.google.com/scholar?q=Applying+semantic+model+for+easy+and+fast+deployment+of+chiller+sequencing+algorithm" target="_blank" class="btn-sm"><i class="fas fa-link"></i> Publisher</a>
+                    </div>
+                </div>
+
+                <div class="citation reveal">
+                    <p>
+                        <span class="author-highlight">Li, S.</span>, Li, S., Mohebi, P., Wang, D., Ma, M. N., Liu, G., & Wang, Z. (2025). 
+                        <span class="paper-title">Field demonstration of model predictive control for chiller sequencing in large-scale commercial buildings.</span> 
+                        <span class="venue">Energy and Buildings</span>, 116021. [IF=7.3]
+                    </p>
+                    <div class="btn-group">
+                        <a href="https://scholar.google.com/scholar?q=Field+demonstration+of+model+predictive+control+for+chiller+sequencing+in+large-scale+commercial+buildings" target="_blank" class="btn-sm"><i class="fas fa-link"></i> Publisher</a>
+                    </div>
+                </div>
+
+                <div class="citation reveal">
+                    <p>
+                        <span class="author-highlight">Li, S.</span>, Su, S., & Lin, X. (2025). 
+                        <span class="paper-title">Optimizing the hyper-parameters of deep reinforcement learning for building control.</span> 
+                        <span class="venue">Building Simulation</span> (Vol. 18, No. 4, pp. 765-789). [IF=5.9]
+                    </p>
+                    <div class="btn-group">
+                        <a href="https://doi.org/10.1007/s12273-025-1233-y" target="_blank" class="btn-sm"><i class="fas fa-link"></i> Publisher</a>
+                    </div>
+                </div>
+
+                <div class="citation reveal">
+                    <p>
+                        <span class="author-highlight">Li, S.</span>, Li, S., & Wang, Z. (2024). 
+                        <span class="paper-title">Accelerating chiller sequencing using dynamic programming.</span> 
+                        <span class="venue">Energy and Buildings</span>, 325, 115037. [IF=7.3]
+                    </p>
+                    <div class="btn-group">
+                        <a href="https://doi.org/10.1016/j.enbuild.2024.115037" target="_blank" class="btn-sm"><i class="fas fa-link"></i> Publisher</a>
+                    </div>
+                </div>
+
+                <h3 class="sub-heading" style="margin-top: 3rem;">Co-Author</h3>
+
+                <div class="citation reveal">
+                    <p>
+                        Mohebi, P., <span class="author-highlight">Li, S.</span>, & Wang, Z. (2025). 
+                        <span class="paper-title">Chance-constrained stochastic framework for building thermal control under forecast uncertainties.</span> 
+                        <span class="venue">Energy and Buildings</span>, 331, 115385.
+                    </p>
+                    <div class="btn-group">
+                        <a href="https://doi.org/10.69357/asim2024.1109" target="_blank" class="btn-sm"><i class="fas fa-link"></i> Publisher</a>
+                    </div>
+                </div>
+
+                <div class="citation reveal">
+                    <p>
+                        Zheng, W., Liu, L., <span class="author-highlight">Li, S.</span>, Zhang, Z., Zhao, P., Li, T., ... & Wang, Z. (2026). 
+                        <span class="paper-title">Smart predict-then-optimize-based model predictive control for Virtual Power Plants with battery storage.</span> 
+                        <span class="venue">Journal of Energy Storage</span>, 142, 119606.
+                    </p>
+                    <div class="btn-group">
+                        <a href="https://doi.org/10.1016/j.est.2025.119606" target="_blank" class="btn-sm"><i class="fas fa-link"></i> Publisher</a>
+                    </div>
+                </div>
+
+                <div class="citation reveal">
+                    <p>
+                        Li, M., Hu, Z., Mohebi, P., <span class="author-highlight">Li, S.</span>, & Wang, Z. (2026). 
+                        <span class="paper-title">Enhancing LLM-based building data query with chain-of-thought, retrieval-augmented generation, and fine-tuning.</span> 
+                        <span class="venue">Automation in Construction</span>, 182, 106738.
+                    </p>
+                    <div class="btn-group">
+                        <a href="https://scholar.google.com/scholar?q=Enhancing+LLM-based+building+data+query+with+chain-of-thought%2C+retrieval-augmented+generation%2C+and+fine-tuning" target="_blank" class="btn-sm"><i class="fas fa-link"></i> Publisher</a>
+                    </div>
+                </div>
+
+                <div class="citation reveal">
+                    <p>
+                        Su, S., <span class="author-highlight">Li, S.</span>, Ding, Y., Mao, P., & Chong, D. (2024). 
+                        <span class="paper-title">Health damage assessment of commuters and staff in the metro system based on field monitoring—A case study of Nanjing.</span> 
+                        <span class="venue">Frontiers in Public Health</span>, 11, 1305829.
+                    </p>
+                    <div class="btn-group">
+                        <a href="https://doi.org/10.3389/fpubh.2023.1305829" target="_blank" class="btn-sm"><i class="fas fa-link"></i> Publisher</a>
+                    </div>
+                </div>
+
+            </section>
+
+            <!-- Education Section -->
+            <section id="education" class="reveal">
+                <h2>Education</h2>
+                
+                <div class="list-item">
+                    <div class="list-date">2024.09 - Pres.</div>
+                    <div class="list-content">
+                        <h3>Hong Kong University of Science and Technology</h3>
+                        <p>M.Phil. in Civil Engineering</p>
+                    </div>
+                </div>
+
+                <div class="list-item">
+                    <div class="list-date">2020.09 - 2024.07</div>
+                    <div class="list-content">
+                        <h3>Southeast University</h3>
+                        <p>Bachelor in Intelligent Building</p>
+                        <p style="font-size: 0.9rem; margin-top: 0.5rem; color: var(--text-tertiary);">National Scholarship (Top 0.2%)</p>
+                    </div>
+                </div>
+            </section>
+
+            <footer style="margin-top: 6rem; padding-top: 2rem; border-top: 1px solid var(--border-color); color: var(--text-tertiary); font-size: 0.9rem;">
+                <p>&copy; 2026 Shuhao Li. Built from scratch.</p>
+            </footer>
+
+        </main>
+    </div>
+
+    <!-- Interactive Scripts -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // 1. Scroll Reveal Animation for Main Content
+            const reveals = document.querySelectorAll('.reveal');
+            const revealOnScroll = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('active');
+                    }
+                });
+            }, {
+                threshold: 0.1,
+                rootMargin: "0px 0px -50px 0px"
+            });
+            reveals.forEach(reveal => revealOnScroll.observe(reveal));
+            
+            setTimeout(() => {
+                reveals.forEach(reveal => {
+                    const rect = reveal.getBoundingClientRect();
+                    if(rect.top < window.innerHeight) {
+                        reveal.classList.add('active');
+                    }
+                });
+            }, 1200); // Trigger after curtain sweep
+
+            // 2. Active Navigation highlighting on scroll
+            const sections = document.querySelectorAll('section');
+            const navLinks = document.querySelectorAll('.nav-menu li a');
+
+            window.addEventListener('scroll', () => {
+                let current = '';
+                sections.forEach(section => {
+                    const sectionTop = section.offsetTop;
+                    const sectionHeight = section.clientHeight;
+                    // Adjusted offset for when section is considered "active"
+                    if (pageYOffset >= (sectionTop - 200)) {
+                        current = section.getAttribute('id');
+                    }
+                });
+
+                navLinks.forEach(link => {
+                    link.classList.remove('active');
+                    if (link.getAttribute('href') === `#${current}`) {
+                        link.classList.add('active');
+                    }
+                });
+            });
+            // 3. Interactive Particle Canvas Background (Attraction)
+            const canvas = document.getElementById('particle-canvas');
+            const ctx = canvas.getContext('2d');
+            let particlesArray;
+
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+
+            let mouse = {
+                x: null,
+                y: null,
+                radius: 150 // Radius of attraction
+            }
+
+            window.addEventListener('mousemove',
+                function(event) {
+                    mouse.x = event.x;
+                    mouse.y = event.y;
+                }
+            );
+
+            class Particle {
+                constructor(x, y, directionX, directionY, size, color) {
+                    this.x = x;
+                    this.y = y;
+                    this.baseX = x;
+                    this.baseY = y;
+                    this.directionX = directionX;
+                    this.directionY = directionY;
+                    this.size = size;
+                    this.color = color;
+                    this.density = (Math.random() * 30) + 1;
+                }
+                draw() {
+                    ctx.beginPath();
+                    ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2, false);
+                    ctx.fillStyle = this.color;
+                    ctx.fill();
+                }
+                update() {
+                    if (this.x > canvas.width || this.x < 0) {
+                        this.directionX = -this.directionX;
+                    }
+                    if (this.y > canvas.height || this.y < 0) {
+                        this.directionY = -this.directionY;
+                    }
+
+                    // Mouse attraction
+                    let dx = mouse.x - this.x;
+                    let dy = mouse.y - this.y;
+                    let distance = Math.sqrt(dx*dx + dy*dy);
+                    let forceDirectionX = dx / distance;
+                    let forceDirectionY = dy / distance;
+                    
+                    let maxDistance = mouse.radius;
+                    let force = (maxDistance - distance) / maxDistance;
+                    
+                    let directionX = forceDirectionX * force * this.density * 0.05;
+                    let directionY = forceDirectionY * force * this.density * 0.05;
+
+                    if (distance < mouse.radius && mouse.x != null) {
+                        // Slowly move towards mouse
+                        this.x += directionX;
+                        this.y += directionY;
+                    } else {
+                        // Slowly return to base direction or normal movement
+                        this.x += this.directionX * 0.5;
+                        this.y += this.directionY * 0.5;
+                    }
+
+                    this.draw();
+                }
+            }
+
+            function init() {
+                particlesArray = [];
+                let numberOfParticles = (canvas.height * canvas.width) / 10000;
+                for (let i = 0; i < numberOfParticles; i++) {
+                    let size = (Math.random() * 2.5) + 1;
+                    let x = (Math.random() * ((innerWidth - size * 2) - (size * 2)) + size * 2);
+                    let y = (Math.random() * ((innerHeight - size * 2) - (size * 2)) + size * 2);
+                    let directionX = (Math.random() * 1) - 0.5;
+                    let directionY = (Math.random() * 1) - 0.5;
+                    // Sage/Emerald green dots
+                    let color = 'rgba(16, 185, 129, 0.4)'; 
+                    particlesArray.push(new Particle(x, y, directionX, directionY, size, color));
+                }
+            }
+
+            function connect() {
+                if (mouse.x == null || mouse.y == null) return;
+
+                let opacityValue = 1;
+                for (let a = 0; a < particlesArray.length; a++) {
+                    // Calculate distance from particle to mouse
+                    let dxMouse = particlesArray[a].x - mouse.x;
+                    let dyMouse = particlesArray[a].y - mouse.y;
+                    let distanceToMouse = Math.sqrt(dxMouse * dxMouse + dyMouse * dyMouse);
+
+                    // Only connect if particle is close to the mouse
+                    if (distanceToMouse < mouse.radius * 1.5) {
+                        for (let b = a; b < particlesArray.length; b++) {
+                            let distance = ((particlesArray[a].x - particlesArray[b].x) * (particlesArray[a].x - particlesArray[b].x))
+                            + ((particlesArray[a].y - particlesArray[b].y) * (particlesArray[a].y - particlesArray[b].y));
+                            
+                            // And the other particle is also nearby
+                            if (distance < (canvas.width/9) * (canvas.height/9)) {
+                                // Opacity fades out based on distance to mouse
+                                opacityValue = 1 - (distanceToMouse / (mouse.radius * 1.5));
+                                ctx.strokeStyle = 'rgba(16, 185, 129,' + (opacityValue * 0.5) + ')'; // Sage/Emerald Green
+                                ctx.lineWidth = 1;
+                                ctx.beginPath();
+                                ctx.moveTo(particlesArray[a].x, particlesArray[a].y);
+                                ctx.lineTo(particlesArray[b].x, particlesArray[b].y);
+                                ctx.stroke();
+                            }
+                        }
+                    }
+                }
+            }
+
+            function animate() {
+                requestAnimationFrame(animate);
+                ctx.clearRect(0,0,innerWidth, innerHeight);
+                for (let i = 0; i < particlesArray.length; i++) {
+                    particlesArray[i].update();
+                }
+                connect();
+            }
+
+            window.addEventListener('resize',
+                function() {
+                    canvas.width = innerWidth;
+                    canvas.height = innerHeight;
+                    mouse.radius = ((canvas.height/80) * (canvas.width/80));
+                    init();
+                }
+            );
+
+            window.addEventListener('mouseout',
+                function() {
+                    mouse.x = undefined;
+                    mouse.y = undefined;
+                }
+            );
+
+            init();
+            animate();
+
+            // 4. Typewriter Effect
+            const texts = [
+                "AI for Building Control", 
+                "HVAC Optimization", 
+                "LLM for Building Modeling", 
+                "Model Predictive Control",
+                "Deep Reinforcement Learning"
+            ];
+            let count = 0;
+            let index = 0;
+            let currentText = '';
+            let letter = '';
+            let isDeleting = false;
+            
+            function type() {
+                if (count === texts.length) {
+                    count = 0;
+                }
+                currentText = texts[count];
+
+                if (isDeleting) {
+                    letter = currentText.slice(0, --index);
+                } else {
+                    letter = currentText.slice(0, ++index);
+                }
+
+                document.querySelector('.typewriter').textContent = letter;
+
+                let typeSpeed = 100;
+                
+                if (isDeleting) {
+                    typeSpeed /= 2;
+                }
+
+                if (!isDeleting && letter.length === currentText.length) {
+                    typeSpeed = 2000; // Pause at the end
+                    isDeleting = true;
+                } else if (isDeleting && letter.length === 0) {
+                    isDeleting = false;
+                    count++;
+                    typeSpeed = 500; // Pause before typing next word
+                }
+
+                setTimeout(type, typeSpeed);
+            }
+            
+            // Start typewriter after curtain sweep
+            setTimeout(type, 1500);
+
+        });
+    </script>
+</body>
+</html>
